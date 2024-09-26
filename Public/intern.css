@@ -1,0 +1,165 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header{
+  background-color: #003366;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+header .logo{
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+nav ul{
+  list-style: none;
+  display: flex;
+}
+
+nav ul li{
+  margin: 0 15px;
+}
+
+nav ul li a{
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 10px 0;
+}
+
+nav ul li a:hover{
+  text-decoration: underline;
+}
+
+/* Hamburger menu styles */
+#menu-toggle {
+  display: none;
+}
+
+#hamburger-btn {
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  order: 1;
+}
+
+.dashboard{
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.welcome h1{
+  font-size: 2em;
+}
+
+.internship-list{
+  margin-top: 20px;
+}
+
+.internship-card{
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.internship-card h3{
+  margin-bottom: 10px;
+}
+
+.internship-card p{
+  margin: 5px 0;
+}
+
+
+button{
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #005599;
+}
+
+footer{
+  text-align: center;
+  background-color: #003366;
+  color: white;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+@media screen and (max-width: 1023px) {
+  header .logo  {
+    font-size: 1.5rem;
+  }
+  
+
+  .links {
+    position: fixed;
+    left: -100%;
+    top: 75px;
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+    background-color: #005599;
+    flex-direction: column;
+    transition: 0.3s ease;
+  }
+
+  header #menu-toggle:checked ~ .links {
+    left: 0;
+  }
+
+  header #hamburger-btn {
+    display: block;
+  }
+
+  nav ul{
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li{
+    margin: 0 15px;
+  }
+  
+  nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+  }
+  
+  nav ul li a:hover{
+    text-decoration: underline;
+  }
+  
+  header .links{
+  gap: 35px;
+}
+}
